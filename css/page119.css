@@ -1,0 +1,202 @@
+@charset "utf-8";
+/* [ Background ] */
+
+
+
+.clickDiv{
+    position: relative;
+    /* border: 1px solid red; */
+    height: 650px;
+    width: 100%;
+    background: url(../images/page119/page119_03.jpg)center 235px / 556px no-repeat;
+}
+
+
+.click_box .toast_area{
+    /* border: 1px solid red; */
+    opacity: 1;
+    width: 54px;
+    height: 56px;
+    background: url(../images/page119/page119_click.png) 0 0 / 100% no-repeat;
+
+}
+
+.click_box.on .hideDiv {
+    opacity: 1;
+    transition: all 0.5s;
+    transition-delay: 0.5s;
+}
+
+.click_box.on .toast_area button{
+    opacity: 0;
+}
+
+.click_box .hideDiv{
+    opacity: 0;
+    position: absolute;
+}
+.click_box .hideDiv img{
+    width: 100%;
+}
+
+.click_box:nth-child(1) .hideDiv{
+    width: 263px;
+    left: -6px;
+    top: 24px;
+}
+
+.click_box:nth-child(2) .hideDiv {
+    width: 240px;
+    right: 0;
+    top: 44px;
+}
+
+
+.click_box:nth-child(3) .hideDiv {
+    width: 225px;
+    left: 0;
+    bottom: -41px;
+}
+
+
+.click_box:nth-child(4) .hideDiv {
+    width: 396px;
+    right: 0;
+    bottom: -30px;
+}
+
+.click_box .toast_area{
+    z-index: 99;
+}
+
+
+.click_box:nth-child(1) .toast_area{
+    top: 250px;
+    left: 225px;
+}
+
+.click_box:nth-child(2) .toast_area {
+    top: 224px;
+    left: 380px;
+}
+
+
+.click_box:nth-child(3) .toast_area {
+    top: 213px;
+    left: 162px;
+}
+
+
+.click_box:nth-child(4) .toast_area {
+    top: 250px;
+        left: 219px;
+}
+
+.click_box:nth-child(1) .hideDiv p{
+    position: absolute;
+        right: -170px;
+            top: 74px;
+}
+
+.click_box:nth-child(2) .hideDiv p {
+    position: absolute;
+    left: -170px;
+    top: 74px;
+}
+
+
+.click_box:nth-child(3) .hideDiv p {
+    position: absolute;
+    right: -170px;
+    bottom: 40px;
+}
+
+.click_box:nth-child(4) .hideDiv p {
+    position: absolute;
+    left: -10px;
+    bottom: 25px;
+}
+
+.replay_Div{
+    position: absolute;
+    right: 65px;
+    z-index: 99;
+}
+
+
+#deepPopA  figure figcaption,
+#supplementPopA  figure figcaption{
+    text-align: center;
+}
+
+.slide_quiz_0 .list img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.slide_quiz_0 .list li{
+    width: 178px;
+    margin-right: 18px;
+}
+
+.slide_quiz_0 .list li:last-child{
+    margin-right: 0;
+}
+
+.slide_quiz_0 .list .linebox{
+    padding: 0;
+    height: 144px;
+}
+
+.slide_quiz_1 .items_list{
+    height: 168px;
+    background: url(../images/page119/page119_pop_08.png)center center / 500px no-repeat;
+}
+
+.slide_quiz_1 .items_list li{
+    display: block;
+    width: 420px;
+    /* border: 1px solid red' */
+    float: none;
+    text-align: center;
+}
+
+.slide_quiz_1 .items_list li:nth-child(1),
+.slide_quiz_1 .items_list li:nth-child(3){
+    margin: 17px 0 20px 14px;
+    padding-left: 151px;
+}
+
+.slide_quiz_1 .items_list li:nth-child(2) {
+    margin: 28px 0 30px 150px;
+    padding-right: 205px;
+    
+}
+
+.slide_quiz_1 .items_list li:nth-child(2) .icon.check.num{
+    left: 400px;
+}
+
+
+
+.slide_quiz_2 .drag_box.txt,
+.slide_quiz_2 .drop_box{
+    width: 130px;
+}
+
+
+.slide_quiz_2 .drag_area.cell_4 .drag_box:nth-child(2) {
+    left: 230px;
+}
+
+.slide_quiz_2 .drag_area.cell_4 .drag_box:nth-child(3){
+    left:380px;
+}
+
+.slide_quiz_2 .drag_area.cell_4 .drag_box{
+    top: 15px;
+}
+
+.page_style1 .b1{
+    position: absolute;
+}

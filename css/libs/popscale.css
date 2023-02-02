@@ -1,0 +1,53 @@
+@charset "utf-8";
+
+/* ------------------------------------------------------------------------------------------------------------- */
+/* popscale */
+/* ------------------------------------------------------------------------------------------------------------- */
+* {
+  -webkit-text-size-adjust: 100%;
+  margin: 0;
+  padding: 0;
+  border: none;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background: #000;
+  overflow: hidden;
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  overflow: hidden;
+}
+
+.page_container {
+  display: none;
+}
+
+#wrap.wayContent {
+  position: absolute;
+  width: 1536px;
+  height: 960px;
+  padding: 0; 
+  overflow: hidden;
+}
+
+#wrap.wayContent.type_zoom {
+  width: 100%;
+  height: 100%;
+}
+
+#wrap.wayContent .zoom_area {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+#wrap.wayContent .zoom_area .zoom--obj {
+  height: 100%;
+}

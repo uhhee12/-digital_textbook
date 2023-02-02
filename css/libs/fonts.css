@@ -1,0 +1,160 @@
+@charset "utf-8";
+/* ------------------------------------------------------------------------------------------------------------- */
+/* font */
+/* ------------------------------------------------------------------------------------------------------------- */
+@font-face {
+  font-family: 'kDotum';
+  font-style: normal;
+  font-weight: 300;
+  src: local('※'), url('../../fonts/KoPubWorld-Dotum_Pro-Light.woff');
+}
+
+@font-face {
+  font-family: 'kDotum';
+  font-style: normal;
+  font-weight: 400;
+  src: local('※'), url('../../fonts/KoPubWorld-Dotum_Pro-Medium.woff');
+}
+
+@font-face {
+  font-family: 'kDotum';
+  font-style: normal;
+  font-weight: 700;
+  src: local('※'), url('../../fonts/KoPubWorld-Dotum_Pro-Bold.woff');
+}
+
+@font-face {
+  font-family: 'kBatang';
+  font-style: normal;
+  font-weight: 300;
+  src: local('※'), url('../../fonts/KoPubWorld-Batang_Pro-Light.woff');
+}
+
+@font-face {
+  font-family: 'kBatang';
+  font-style: normal;
+  font-weight: 400;
+  src: local('※'), url('../../fonts/KoPubWorld-Batang_Pro-Medium.woff');
+}
+
+@font-face {
+  font-family: 'kBatang';
+  font-style: normal;
+  font-weight: 700;
+  src: local('※'), url('../../fonts/KoPubWorld-Batang_Pro-Bold.woff');
+}
+
+@font-face {
+  font-family: 'gMarket';
+  font-style: normal;
+  font-weight: 300;
+  src: local('※'), url('../../fonts/GmarketSansTTFLight.woff');
+}
+
+@font-face {
+  font-family: 'gMarket';
+  font-style: normal;
+  font-weight: 400;
+  src: local('※'), url('../../fonts/GmarketSansTTFMedium.woff');
+}
+
+@font-face {
+  font-family: 'gMarket';
+  font-style: normal;
+  font-weight: 700;
+  src: local('※'), url('../../fonts/GmarketSansTTFBold.woff');
+}
+
+@font-face {
+  font-family: 'JALNAN';
+  font-style: normal;
+  font-weight: 700;
+  src: local('※'), url('../../fonts/Jalnan.woff');
+}
+
+@font-face {
+  font-family: 'GyeonggiTitle';
+  font-style: normal;
+  font-weight: 300;
+  src: local('※'), url('../../fonts/GyeonggiTitleLight.woff');
+}
+
+@font-face {
+  font-family: 'GyeonggiTitle';
+  font-style: normal;
+  font-weight: 400;
+  src: local('※'), url('../../fonts/GyeonggiTitleMedium.woff');
+}
+
+@font-face {
+  font-family: 'GyeonggiTitle';
+  font-style: normal;
+  font-weight: 700;
+  src: local('※'), url('../../fonts/GyeonggiTitleBold.woff');
+}
+
+@font-face {
+  font-family: 'Recipekorea';
+  font-style: normal;
+  font-weight: 700;
+  src: local('※'), url('../../fonts/Recipekorea.woff');
+}
+
+@font-face {
+  font-family: 'Gamja';
+  font-style: normal;
+  font-weight: 400;
+  src: local('※'), url('../../fonts/GamjaFlower-Regular.woff');
+}
+
+@font-face {
+  font-family: 'MalangMalang';
+  font-style: normal;
+  font-weight: 400;
+  src: local('※'), url('../../fonts/HancomMalangMalang-Regular.woff');
+}
+
+@font-face {
+  font-family: 'MalangMalang';
+  font-style: normal;
+  font-weight: 700;
+  src: local('※'), url('../../fonts/HancomMalangMalang-Bold.woff');
+}
+
+@font-face {
+  font-family: 'Jua';
+  font-style: normal;
+  font-weight: 400;
+  src: local('※'), url('../../fonts/BMJUA.woff');
+}
+
+.f_kdl {
+  font-family: 'kDotum';
+  font-weight: 300;
+}
+
+.f_kdm {
+  font-family: 'kDotum';
+  font-weight: 400;
+}
+
+.f_kdb {
+  font-family: 'kDotum';
+  font-weight: 700;
+}
+
+.f_kbm {
+  font-family: 'kBatang';
+  font-weight: 400;
+}
+
+.f_kbb {
+  font-family: 'kBatang';
+  font-weight: 700;
+}
+
+.f_gtb {
+  font-family: 'GyeonggiTitle';
+  font-weight: 700;
+}
+

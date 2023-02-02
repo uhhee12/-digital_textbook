@@ -1,0 +1,1064 @@
+@charset "utf-8";
+/* ------------------------------------------------------------------------------------------------------------- */
+/* button */
+/* ------------------------------------------------------------------------------------------------------------- */
+.btn {
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  box-sizing: border-box;
+}
+
+.btn.disabled {
+  pointer-events: none;
+}
+
+/* 프로토 임시 */
+.btn.bi.disabled,
+.btn.bt.disabled {
+  pointer-events: auto;
+}
+
+.btn_wrap {
+  pointer-events: none;
+  display: inline-block;
+  line-height: 0;
+  cursor: default;
+  /*z-index: 10*/
+}
+
+.btn_wrap > button,
+.btn_wrap > div,
+.btn_wrap > span,
+.btn_wrap > .btn,
+.btn_wrap > a {
+  pointer-events: auto;
+  float: left;
+  line-height: 1;
+  margin-right: 10px
+}
+
+.btn_wrap > button:last-child,
+.btn_wrap > div:last-child,
+.btn_wrap > span:last-child,
+.btn_wrap > .btn:last-child,
+.btn_wrap > a:last-child {
+  margin-right: 0px
+}
+
+.btn_wrap:after {
+  display: block;
+  height: 0;
+  clear: both;
+  content: '';
+}
+
+.btn_wrap.top_right {
+  position: absolute;
+  top: 0;
+  left: auto;
+  right: 0;
+}
+
+.btn_wrap.bottom_left {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.btn_wrap.bottom_right {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.btn_wrap.bottom_left.fix,
+.btn_wrap.bottom_right.fix {
+  pointer-events: none;
+  bottom: 62px;
+  width: 100%;
+  padding: 0 58px;
+  box-sizing: border-box;
+}
+
+.btn_wrap.bottom_left.fix.has--position,
+.btn_wrap.bottom_right.fix.has--position {
+  animation: fadeIn 0.1s 0.1s both;
+  -webkit-animaition: fadeIn 0.1s 0.1s both;
+  -ms-animation: fadeIn 0.1s 0.1s both;
+}
+
+.btn_wrap.top_left > div,
+.btn_wrap.bottom_left > div,
+.btn_wrap.top_right > div,
+.btn_wrap.bottom_right > div {
+  pointer-events: none;
+  float: none;
+  display: block;
+  position: relative;
+  min-height: 34px;
+}
+
+.btn_wrap.top_left > div + div,
+.btn_wrap.bottom_left > div + div,
+.btn_wrap.top_right > div + div,
+.btn_wrap.bottom_right > div + div {
+  margin-top: 10px;
+}
+
+.btn_wrap.top_left > div > *,
+.btn_wrap.bottom_left > div > * {
+  pointer-events: auto;
+  float: left;
+  margin-right: 10px;
+  margin-left: 0;
+}
+
+.btn_wrap.top_right > div > *,
+.btn_wrap.bottom_right > div > * {
+  pointer-events: auto;
+  float: right;
+  margin-left: 10px;
+  margin-right: 0;
+}
+
+.btn_wrap.bottom_center.fix {
+  display: block;
+  pointer-events: none;
+  position: absolute;
+  left: 50%;
+  bottom: 60px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  transform: translate(-50%, 0);
+}
+
+.btn_wrap.bottom_center > div > * {
+  float: left;
+  margin: 0 4px;
+}
+
+.btn_wrap.line_right {
+  display: block;
+  position: relative;
+  min-height: 34px;
+  margin-top: 10px;
+  box-sizing: border-box;
+}
+
+.btn_wrap.line_right > * {
+  float: right;
+  margin: 0 0 0 10px;
+}
+
+.btn_wrap.line_left {
+  display: block;
+  position: relative;
+  min-height: 34px;
+  margin-top: 10px;
+  box-sizing: border-box;
+}
+
+.btn_wrap.line_left > * {
+  float: left;
+  margin: 0 10px 0 0;
+}
+
+.btn_wrap.line_center {
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  min-height: 34px;
+  margin-top: 20px;
+  box-sizing: border-box;
+}
+
+.btn_wrap.inline {
+  position: absolute;
+  margin-left: 10px;
+  margin-top: -5px;
+}
+
+.btn_wrap.unwrap_right {
+  display: block;
+  position: relative;
+  height: 0;
+}
+
+.btn_wrap.unwrap_right .btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/* ------------------------------------------------------------------------------------------------------------- */
+/* btn - check - display */
+.btn.check,
+.btn.answer {
+  display: inline-block;
+}
+
+.btn.replay {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.btn.replay.toggle {
+  display: block;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.btn.check.btn--show,
+.btn.answer.btn--show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.btn.replay.on,
+.btn.replay.btn--show {
+  display: block;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ------------------------------------------------------------------------------------------------------------- */
+/* 퀴즈 다시 풀기 버튼 위치 확보, 정답확인시 버튼 사라짐*/
+[data-quiz-btn].btn.replay {
+  display: block;
+}
+
+[data-quiz-btn].btn.replay.on,
+[data-quiz-btn].btn.replay.btn--show {
+  pointer-events: auto;
+}
+
+[data-quiz-btn].btn.check.on,
+[data-quiz-btn].btn.check.disabled {
+  opacity: 0;
+}
+
+/* ------------------------------------------------------------------------------------------------------------- */
+/* btn img */
+.btn.img img {
+  display: block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  width: 100%;
+}
+
+/* ------------------------------------------------------------------------------------------------------------- */
+/* goal */
+.btn.goal {
+  display: inline-block;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #1F9BD9;
+  border-radius: 50%;
+  box-shadow: 0px 3px 0px rgba(0,0,0,0.25);
+  box-sizing: border-box;
+  text-indent: -9999px;
+  background: #26ACEF url(../../images/libs/button/chapter_goal.png) center center / 100% auto no-repeat;
+}
+
+.this_chapter .btn.goal { 
+}
+
+/* ------------------------------------------------------------------------------------------------------------- */
+/* btn - pointer */
+.btn.pointer {
+  position: absolute;
+  width: 32px;
+  height: 38px;
+  text-indent: -9999px;
+  background-image: url(../../images/libs/button/btn_pointer.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 32px auto;
+}
+
+.btn.pointer.on:not([data-turn-audio]) {
+  pointer-events: none;
+  opacity: 0;
+}
+
+.btn.pointer[data-turn-audio].on,
+.btn[data-turn-audio].on .icon.pointer {
+  width: 40px;
+  height: 40px;
+  background-image: url(../../images/libs/button/btn_bi_play_on.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 40px auto;
+  border: 1px solid #2292CA;
+  background-color: #26ACEF;
+  border-radius: 50%;
+  box-shadow: 0px 3px 0px rgba(0,0,0,0.25);
+}
+
+.btn.pointer[data-turn-audio].on {
+  margin-top: -1px;
+  margin-left: -3px;
+}
+
+.btn[data-turn-audio].on .icon.pointer {
+  margin-top: -11px;
+  margin-left: -13px;
+}
+
+.icon.pointer,
+.btn .icon.pointer {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -10px;
+  margin-top: -10px;
+  width: 32px;
+  height: 38px;
+  background: url(../../images/libs/button/btn_pointer.png) 0px 0px / 32px auto no-repeat;
+  text-indent: -9999px;
+}
+
+.btn.pointer,
+.icon.pointer {
+  animation: movePointer 1.5s both;
+  -webkit-animaition: movePointer 1.5s both;
+  -ms-animation: movePointer 1.5s both;
+  animation-iteration-count: 10;
+}
+
+.btn.pointer:after,
+.icon.pointer:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../../images/libs/button/btn_pointer_ani.png) 0px 0px / 32px auto no-repeat;
+  animation: fadePointer 3s infinite both;
+  -webkit-animaition: fadePointer 3s infinite both;
+  -ms-animation: fadePointer 3s infinite both;
+}
+
+.btn.pointer.on,
+.btn.on .icon.pointer,
+.viewed--turn .btn.pointer,
+.viewed--turn .icon.pointer {
+  animation: none;
+  -webkit-animaition: none;
+  -ms-animation: none;
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1)
+}
+
+.btn.pointer.on:after,
+.btn.on .icon.pointer:after,
+.viewed--turn .btn.pointer:after,
+.viewed--turn .icon.pointer:after {
+  display: none;
+}
+
+/* ------------------------------------------------------------------------------------------------------------- */
+/* btn - ransparent */
+.btn.trans {
+  width: 100%;
+  height: 100%;
+}
+
+.btn.trans .pointer {
+  top: auto;
+  bottom: -12px;
+  right: 0;
+  margin-top: 0;
+  margin-left: 0;
+}
+
+/* ------------------------------------------------------------------------------------------------------------- */
+/* btn - word */
+.btn.word {
+  position: relative;
+  color: #1684ff;
+  padding-left: 6px;
+}
+
+.btn.word:before {
+  content: "";
+  position: absolute;
+  left: -2px;
+  top: 0;
+  width: 9px;
+  height: 9px;
+  background: url(../../images/libs/button/btn_word.png) 0px 0px / 100% auto no-repeat;
+}
+
+/* ------------------------------------------------------------------------------------------------------------- */
+/* btn - 아이콘 */
+.btn.bi i,
+.btn.open--drawing {
+  display: block;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  text-indent: -9999px;
+  border: 1px solid #1F9BD9;
+  background-color: #26ACEF;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 40px auto;
+  border-radius: 50%;
+  box-shadow: 0px 3px 0px rgba(0,0,0,0.25);
+  box-sizing: border-box;
+}
+
+.btn.bi.dull i {
+  border: 1px solid #119574;
+  background-color: #02A87F;
+}
+
+/* btn - intxt */
+.btn.intxt i {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.btn.intxt .btxt {
+  box-sizing: border-box;
+  display: inline-block;
+  margin-left: 8px;
+  margin-right: 6px;
+  padding-top: 2px;
+  font-family: 'GyeonggiTitle';
+  font-size: 15px;
+  font-weight: 400;
+  color: #0c78ae;
+  line-height: 34px;
+  vertical-align: middle;
+}
+
+.btn.dull.intxt .btxt {
+  color: #0C7F6D;
+}
+
+.btn.intxt.outline {
+  position: relative;
+}
+
+.btn.intxt.outline i {
+  z-index: 1;
+}
+
+.btn.intxt.outline .btxt {
+  background: #fff;
+  height: 32px;
+  margin: 0 0 0 -32px;
+  padding: 0 10px 0 34px;
+  border: 3px solid #26ACEF;
+  border-right-width: 4px;
+  border-radius: 32px;
+  box-shadow: 0px 3px 0px rgba(0,0,0,0.25);
+  line-height: 26px;
+}
+
+.btn.dull.intxt.outline .btxt {
+  border-color: #02A87F;
+}
+
+/* 색변화 고정 */
+.btn.bi i.add_data,
+.btn.bi i.supplement,
+.btn.bi i.lesson_test,
+.btn.bi i.chapter_test,
+.btn.bi i.game,
+.btn.bi i.laboratory,
+.btn.bi i.deep,
+.btn.bi i.supplement_activity,
+.btn.bi i.finish_learn {
+  border: 1px solid #119574;
+  background-color: #02A87F;
+}
+
+.btn.intxt.outline i.add_data + .btxt,
+.btn.intxt.outline i.supplement + .btxt,
+.btn.intxt.outline i.lesson_test + .btxt,
+.btn.intxt.outline i.chapter_test + .btxt,
+.btn.intxt.outline i.game + .btxt,
+.btn.intxt.outline i.laboratory + .btxt,
+.btn.intxt.outline i.deep + .btxt,
+.btn.intxt.outline i.supplement_activity + .btxt,
+.btn.intxt.outline i.finish_learn + .btxt {
+  border-color: #02A87F;
+  color: #0C7F6D;
+}
+
+/* btn - check, replay */
+.btn.bi.replay,
+.btn.bi.check,
+.btn.bi.answer,
+.btn.bi.close {
+  position: relative;
+  width: 34px;
+  height: 34px;
+  border: 1px solid #00a370;
+  background-color: #00BF81;
+  border-radius: 20px;
+  box-shadow: 0px 3px 0px rgba(0,0,0,0.25);
+}
+
+.btn.bi.replay i,
+.btn.bi.check i,
+.btn.bi.answer i,
+.btn.bi.close i {
+  content: "";
+  display: block;
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 32px;
+  height: 32px;
+  border: none;
+  background-color: transparent;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: auto 26px;
+  box-shadow: none;
+}
+
+.btn.bi.replay i {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 54 54' xml:space='preserve'%3E%3Cpath d='M41.5 27.8c-1.6 0-2.9 1.3-2.9 2.9 0 6.6-5.2 11.8-11.8 11.8-6.5 0-11.8-5.3-11.8-11.8s5.3-11.8 11.8-11.8c.5 0 .9 0 1.3.1l-3.5 3.8c-1.1 1.2-1 3 .2 4.1.6.5 1.3.8 2 .8.8 0 1.6-.3 2.1-.9l7-7.6c1-1.1 1-2.8 0-4l-7-7.6c-1.1-1.2-2.9-1.3-4.1-.2s-1.3 2.9-.2 4.1l1.4 1.6c-9.4.4-16.9 8.1-16.9 17.6 0 9.7 7.9 17.6 17.6 17.6 9.9 0 17.6-7.7 17.6-17.6.1-1.6-1.2-2.9-2.8-2.9z' fill='%23FFFFFF'/%3E%3C/svg%3E");
+  background-position: center 2px;
+}
+
+.btn.bi.check i,
+.btn.bi.answer i {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 54 54' xml:space='preserve'%3E%3Cpath d='M24.3 39.3c-.7 0-1.4-.3-2-.8L8.6 25.7c-1.2-1.1-1.2-2.9-.1-4.1s2.9-1.2 4.1-.1l11.7 10.9L41 16.5c1.2-1.1 3-1.1 4.1.1 1.1 1.2 1.1 3-.1 4.1L26.3 38.5c-.5.5-1.3.8-2 .8z' fill='%23FFFFFF'/%3E%3C/svg%3E");
+}
+
+.btn.bi.close i {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 54 54' xml:space='preserve'%3E%3Cpath d='m31.1 27 8.4-8.4c1.1-1.1 1.1-3 0-4.1-1.1-1.1-3-1.1-4.1 0L27 22.9l-8.4-8.4c-1.1-1.1-3-1.1-4.1 0-1.1 1.1-1.1 3 0 4.1l8.4 8.4-8.4 8.4c-1.1 1.1-1.1 3 0 4.1.6.6 1.3.9 2.1.9.7 0 1.5-.3 2.1-.9l8.4-8.4 8.4 8.4c.6.6 1.3.9 2.1.9s1.5-.3 2.1-.9c1.1-1.1 1.1-3 0-4.1L31.1 27z' fill='%23fff'/%3E%3C/svg%3E");
+}
+
+.btn.bi.check.disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
+.btn.bi.intxt.check,
+.btn.bi.intxt.answer,
+.btn.bi.intxt.replay,
+.btn.bi.intxt.close {
+  width: auto;
+  padding-left: 30px;
+  text-indent: 0;
+  background-image: none;
+}
+
+.btn.bi.intxt.check i,
+.btn.bi.intxt.answer i,
+.btn.bi.intxt.replay i,
+.btn.bi.intxt.close i {
+  position: absolute;
+  left: 2px;
+  top: 0;
+  border: none;
+  box-shadow: none;
+  z-index: 1;
+}
+
+.btn.bi.replay.intxt .btxt,
+.btn.bi.check.intxt .btxt,
+.btn.bi.answer.intxt .btxt,
+.btn.bi.close.intxt .btxt {
+  padding-top: 0;
+  margin-right: 14px;
+  color: #fff;
+}
+
+/* 대단원 도입 */
+ 
+.btn.bi i.chapter_goal {
+  background-image: url(../../images/libs/button/chapter_goal.png);
+}
+
+/* 용어 정리 */
+.btn.bi i.chapter_dic {
+  background-image: url(../../images/libs/button/chapter_dic.png);
+}
+
+/* 교과서 이어보기 */
+.btn.bi i.page_link {
+  background-image: url(../../images/libs/button/page_link.png);
+}
+
+/* 그리기 호출 */
+.btn.open--drawing {
+  background-image: url(../../images/libs/button/btn_bi_draw.png);
+}
+
+.btn.open--drawing.on {
+  width: 26px;
+  height: 29px;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  background-color: transparent;
+  background: url(../../images/libs/draw/draw_close.png) 0px 0px / 26px auto no-repeat;
+}
+
+/* 스티커 */
+.btn.bi i.sticker,
+.popup_title .icon_sticker {
+  background-image: url(../../images/libs/button/btn_bi_sticker.png);
+}
+
+/* 페이지 이동 */
+.btn.bi i.pagemove {
+  background-image: url(../../images/libs/button/btn_bi_pagemove.png);
+}
+
+/* 모션 재생 */
+.btn.bi i.play,
+.popup_title .icon_play {
+  background-image: url(../../images/libs/button/btn_bi_play.png);
+}
+
+.btn.bi i.play.sound {
+  background-image: url(../../images/libs/button/btn_bi_play_audio.png);
+}
+
+.btn.bi.on i.play,
+.btn.bi.on i.play.sound,
+.btn.bi.audio--on i.play,
+.btn.bi.audio--on i.play.sound {
+  background-image: url(../../images/libs/button/btn_bi_play_on.png);
+}
+
+.btn.bi i.stop {
+  background-image: url(../../images/libs/button/btn_bi_play_stop.png);
+}
+
+.btn.bi[data-popup] i.play {
+  background-image: url(../../images/libs/button/btn_bi_play.png);
+}
+
+.btn.bi[data-popup] i.play.sound {
+  background-image: url(../../images/libs/button/btn_bi_play_audio.png);
+}
+
+.btn.bi.has--stop {
+  position: relative;
+}
+
+.btn.bi.on.has--stop i.play,
+.btn.bi.audio--on.has--stop i.play {
+  width: 70px;
+  border-radius: 36px;
+  background-position: 0px center;
+}
+
+.btn.bi.has--stop i.stop {
+  display: none;
+  width: 34px;
+  background-position: -5px center;
+  border: none;
+  box-shadow: none;
+  background-color: rgba(0,0,0,0);
+  border-radius: 0;
+}
+
+.btn.bi.on.has--stop i.stop,
+.btn.bi.audio--on.has--stop i.stop {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 35px;
+}
+
+/* 참고영상 */
+.btn.bi i.video,
+.popup_title .icon_video {
+  background-image: url(../../images/libs/button/btn_bi_video.png);
+}
+.btn.bi i.video.txt  {
+	text-indent: 0;
+	color: #FFF;
+	font-size: 11px;
+	padding-top: 24px;
+	font-style: normal;
+	font-family: 'kDotum';
+	background-position:center -3px
+}
+/* 돋보기 */
+.btn.bi i.zoom,
+.popup_title .icon_zoom {
+  background-image: url(../../images/libs/button/btn_bi_zoom.png);
+}
+
+/* 확대보기 */
+.btn.bi i.zoom_in {
+  width: 25px;
+  height: 25px;
+  background-image: url(../../images/libs/button/btn_bi_zoom_in.png);
+  background-size: 25px auto;
+}
+
+/* 축소보기 */
+.btn.bi i.zoom_out {
+  width: 25px;
+  height: 25px;
+  background-image: url(../../images/libs/button/btn_bi_zoom_out.png);
+  background-size: 25px auto;
+}
+
+/* 인터넷 링크 */
+.btn.bi i.link {
+  background-image: url(../../images/libs/button/btn_bi_link.png);
+}
+
+/* 페이지 이어보기 */
+.btn.bi i.booklink {
+  background-image: url(../../images/libs/button/btn_bi_booklink.png);
+}
+
+/* 보충 */
+.btn.bi i.supplement,
+.popup_title .icon_supplement {
+  background-image: url(../../images/libs/button/btn_bi_supplement.png);
+}
+
+/* 마무리 문제(평가) */
+.btn.bi i.finish_learn,
+.popup_title .icon_finish_learn {
+  background-image: url(../../images/libs/button/btn_bi_finish_learn.png);
+}
+
+/* 놀이로 마무리 */
+.btn.bi i.game,
+.popup_title .icon_game {
+  background-image: url(../../images/libs/button/btn_bi_game.png);
+}
+
+/* 단원 평가 */
+.btn.bi i.chapter_test,
+.popup_title .icon_chapter_test {
+  background-image: url(../../images/libs/button/btn_bi_chapter_test.png);
+}
+
+/* 노트 확인법 */
+.btn.bi i.gudie_note,
+.popup_title .icon_gudie_note {
+  background-image: url(../../images/libs/button/btn_bi_guide_note.png);
+}
+
+/* 추가자료 보기 */
+.btn.bi i.add_data,
+.popup_title .icon_add_data {
+  background-image: url(../../images/libs/button/btn_bi_add_data.png);
+}
+
+/* 준비물 */
+.btn.bi i.supplies,
+.popup_title .icon_supplies {
+  background-image: url(../../images/libs/button/btn_bi_supplies.png);
+}
+
+/* 안전 수칙 */
+.btn.bi i.safety {
+  background-color:#F74B4B;
+  border-color: #EE5050;
+  background-image: url(../../images/libs/button/btn_bi_safety.png);
+}
+
+.popup_title .icon_safety {
+  background-image: url(../../images/libs/button/btn_bi_safety.png);
+}
+
+/* 유의점 */
+.btn.bi i.attention,
+.popup_title .icon_attention {
+  background-color:#FF9314;
+  border-color: #FF8814;
+  background-image: url(../../images/libs/button/btn_bi_attention.png);
+}
+
+/* 실험 관찰 */
+.btn.bi i.inquiry,
+.popup_title .icon_inquiry,
+.btn.bi i.self_summary,
+.popup_title .icon_self_summary {
+  background-image: url(../../images/libs/button/btn_bi_inquiry.png);
+}
+
+/* 실험과정 영상 */
+.btn.bi i.inquiry_before,
+.popup_title .icon_inquiry_before {
+  background-image: url(../../images/libs/button/btn_bi_inquiry_before.png);
+}
+
+/* 실험 결과 영상 */
+.btn.bi i.inquiry_after,
+.popup_title .icon_inquiry_after {
+  background-image: url(../../images/libs/button/btn_bi_inquiry_after.png);
+}
+
+/* 가상 실험실 */
+.btn.bi i.laboratory,
+.popup_title .icon_laboratory {
+  background-image: url(../../images/libs/button/btn_bi_laboratory.png);
+}
+
+/* 학습확인 */
+.btn.bi i.done,
+.popup_title .icon_done {
+  background-image: url(../../images/libs/button/btn_bi_study_done.png);
+}
+
+/* 생각 키우기 */
+.btn.bi i.grow,
+.popup_title .icon_grow {
+  background-image: url(../../images/libs/button/btn_bi_grow.png);
+}
+
+.btn.bi i.grow + .btxt {
+  width: 138px;
+  background: #fff url(../../images/libs/button/btn_bi_grow_txt.png) 34px 0 / auto 25px no-repeat;
+  color: transparent;
+}
+
+/* 탐구 더하기 */
+.btn.bi i.plus,
+.popup_title .icon_plus {
+  background-image: url(../../images/libs/button/btn_bi_plus.png);
+}
+
+.btn.bi i.plus + .btxt {
+  width: 135px;
+  background: #fff url(../../images/libs/button/btn_bi_plus_txt.png) 34px 0 / auto 25px no-repeat;
+  color: transparent;
+}
+
+/* 탐구 보고서 */
+.btn.bi i.inquiry_report  {
+  background-image: url(../../images/libs/button/btn_bi_inquiry_report.png);
+}
+
+/* 내 별 점수 */
+.btn.bi i.star_score,
+.popup_title .icon_star_score {
+  background-image: url(../../images/libs/button/btn_bi_star_score.png);
+}
+
+/* 심화 */
+.btn.bi i.deep,
+.popup_title .icon_deep {
+  background-image: url(../../images/libs/button/btn_bi_deep.png);
+}
+
+/* 보충활동 */
+.btn.bi i.supplement_activity,
+.popup_title .icon_supplement_activity {
+  background-image: url(../../images/libs/button/btn_bi_supplement_activity.png);
+}
+
+/* 기타 */
+.btn.bi i.etc,
+.popup_title .icon_etc {
+  background-image: url(../../images/libs/button/btn_bt.png);
+}
+
+/* 평가하기 */
+.btn.bi i.rating,
+.popup_title .icon_rating {
+  background-image: url(../../images/libs/button/btn_bi_rating.png);
+}
+
+
+/* 평가하기 */
+.btn.env {
+	position:relative;
+	background: #fff;
+	height: 32px;
+	margin: 0 0 0 0px;
+	padding: 0 10px 0 10px;
+	border: 3px solid #26ACEF;
+	border-right-width: 4px;
+	border-radius: 32px;
+	box-shadow: 0px 3px 0px rgba(0 0 0 / 25%);
+	line-height: 26px; 
+	font-family: 'GyeonggiTitle';
+	font-size: 15px;
+	font-weight: 400;
+	color: #0c78ae;
+}
+
+.btn.env i.env {
+  background: url(../../images/libs/button/btn_bi_env.png) 0 0 / 100% no-repeat;
+	width:30px;
+	height:25px;
+	margin-right:6px
+}
+.btn.env i.env + span {
+	vertical-align:middle
+}
+ 
+/* ------------------------------------------------------------------------------------------------------------- */
+/* btn - 텍스트 */
+.btn.bt {
+  height: 32px;
+  padding: 0 13px;
+  background: #1684ff;
+  border: 1px solid #1F9CDA;
+  color: #fff;
+  box-shadow: 0px 2px 0px rgba(0,0,0,0.15);
+  border-radius: 18px;
+}
+
+.btn.bt.dull {
+  background: #1684ff;
+  border: 1px solid #d73350;
+}
+
+.btn.bt .txt {
+  font-family: 'Binggrae';
+  font-weight: 700;
+  font-size: 14px;
+  color: #fff;
+  line-height: 30px;
+}
+
+/* ------------------------------------------------------------------------------------------------------------- */
+/* btn - 아이콘 + 텍스트 */
+.btn.bit {
+  height: 40px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* ------------------------------------------------------------------------------------------------------------- */
+/* AR버튼 */
+.btn.btnAr,
+.btn.btn360,
+.btn.btnVr,
+.btn.btnVr2 {
+  position: absolute;
+  font-size: 0;
+  vertical-align: top;
+  word-break: keep-all;
+  width: 60px;
+  height: 60px;
+  z-index: 10
+}
+
+.btn.btnAr2,
+.btn.btn360Self,
+.btn.btnVr2 {
+  position: absolute;
+  font-size: 0;
+  vertical-align: top;
+  word-break: keep-all;
+  width: 80px;
+  height: 40px;
+  z-index: 10
+}
+
+.btn.btnAr {
+  background: url(../../images/libs/button/marker/btn_ar.png) no-repeat 0px 0px / 100% auto;
+}
+
+.btn.btn360 {
+  background: url(../../images/libs/button/marker/btn_360.png) no-repeat 0px 0px / 100% auto;
+}
+
+.btn.btnVr {
+  background: url(../../images/libs/button/marker/btn_vr.png) no-repeat 0px 0px / 100% auto;
+}
+
+.btn.btnAr2 {
+  background: url(../../images/libs/button/marker/btn_ar2.png) no-repeat 0px 0px / 100% auto;
+}
+
+.btn.btn360Self {
+  background: url(../../images/libs/button/marker/btn_360_self.png) no-repeat 0px 0px / 100% auto;
+}
+
+.btn.btnVr2 {
+  background: url(../../images/libs/button/marker/btn_vr2.png) no-repeat 0px 0px / 100% auto;
+}
+
+.btn.ARmarker {
+  position: absolute;
+  text-indent: -9999px;
+  vertical-align: top;
+  word-break: keep-all;
+  width: 60px;
+  height: 20px;
+  font-size: 12px;
+  line-height: 1.5;
+  cursor: pointer;
+  background: url(../../images/libs/button/marker/AR_marker.png) no-repeat 0px 0px / 100% auto;
+  z-index: 10
+}
+
+.btn.ARmarker a,
+.btn.ARmarker a span {
+  display: block;
+  font-size: 12px;
+}
+
+.btn.btnAr p,
+.btn.btn360 p,
+.btn.btnVr p,
+.btn.btnVr2 p {
+  font-family: 'kDotum';
+  font-size: 12px;
+  letter-spacing: -0.01em;
+  word-break: keep-all;
+  padding-top: 65px;
+  text-align: center;
+  width: 80px;
+  margin-left: -10px;
+  line-height: 1.3;
+  color: #1e85e7;
+  text-indent: 0
+}
+
+.btn.btnAr2 p,
+.btn.btn360Self p,
+.btn.btnVr2 p {
+  font-family: 'kDotum';
+  font-size: 12px;
+  letter-spacing: -0.01em;
+  word-break: keep-all;
+  padding-top: 40px;
+  text-align: center;
+  width: 80px;
+  margin-left: -2px;
+  line-height: 1.3;
+  color: #1e85e7;
+  text-indent: 0
+}
+
+.btn.btnAr p,
+.btn.btnAr2 p {
+  color: #1e85e7;
+}
+
+.btn.btn360 p,
+.btn.btn360Self p {
+  color: #179364;
+}
+
+.btn.btnVr p,
+.btn.btnVr2 p {
+  color: #7d40c5;
+}
+ 

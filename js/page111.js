@@ -1,0 +1,37 @@
+document.addEventListener("DOMContentLoaded", function () {
+  /* view function complete */
+  EDUTSS.complete = {
+    tab: function (obj) { /* console.log(obj); */ },
+    slide: function (obj) { /* console.log(obj); */ },
+    openPopup: function (target, btn) { /* console.log(target, btn); */ },
+    closeAllPopup: function () { /* console.log('closeAllPopup') */ },
+    showHide: function (target) { /* console.log(target); */ },
+    sound: function (target, type) { /* console.log(type, target); */ },
+    turnAudio: function (target, type, idx) { /* console.log(type, idx, target); */ },
+    animate: function (obj) { /* console.log(obj); */ },
+    quizResult: function (obj) { /* console.log(obj); */ },
+    quizReset: function (obj) { /* console.log(obj); */ },
+    dragDrop: function (obj, start, end) { /* console.log(obj, start, end); */ },
+    drawLine: function (obj, start, end) { /* console.log(obj, start, end); */ },
+    checkList: function (obj, target) { /* console.log(obj, target); */ },
+    zoom: function (obj) { /* console.log(obj); */ },
+    mediaPlayer: function (obj, type) { /* console.log(type); */ },
+  };
+
+  /* page - JS */
+  var pageEvent = {
+    init: function () {
+
+			$('.clickBtn').on('click', function() {
+					$(this).parent('.play_area').find('.arrows').addClass('on animated')
+					$(this).parent('.play_area').find('.line').addClass('on')
+					$(this).parent('.play_area').find('.txt').addClass('on')
+					$(this).parent('.play_area').find('dl').addClass('on')		
+					$(this).find('.icon.pointer').hide();
+			});
+
+    }
+  }
+
+  pageEvent.init();
+});

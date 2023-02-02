@@ -1,0 +1,240 @@
+@charset "utf-8";
+/* [ Background ] */
+#wrap {
+    background: url(../images/page118/page118_07.png) 80px 760px / 282px no-repeat
+}
+
+.type_lesson header .title.lesson{
+    width: 431px;
+}
+
+.type_lesson header .title.lesson .this_goal {
+	left:290px
+}
+.type_lesson header .btn_wrap.top_right {
+    left: 360px
+}
+
+.content.inquiry {
+    height: calc(1024px - 60px - 253px);
+}
+
+.type_lesson header .bg_area {
+    bottom: -25px;
+    right: -60px;
+    width: 352px;
+}
+
+.bottom_inquiry p:nth-child(3),
+.bottom_inquiry p:nth-child(4){
+    margin-left: 320px;
+}
+
+
+/* 실헙관찰 */
+.ic_page_a1 .quiz_area:nth-child(3) .txt{
+    padding: 0 0 0 14px;
+}
+
+.ic_page_a1 .quiz_area:nth-child(1) {
+    margin-bottom: 20px;
+}
+
+.ic_page_a1 .quiz_area:nth-child(4) .txt{
+    background: url(../images/page118/right_icon_03.png)0 8px / 16px no-repeat;
+    padding-left: 25px;
+}
+
+.innerDiv{
+    margin-bottom: 20px;
+    height: 199px;
+    padding: 0 35px;
+    background: url(../images/page118/page118_pop_03.png)center center / 580px no-repeat;
+}
+
+.innerDiv .conDiv{
+    position: relative;
+    display: inline-block;
+    width: 270px;
+    height: 200px;
+}
+
+.innerDiv .conDiv:first-child{
+    margin-right: 20px;
+}
+
+.innerDiv .conDiv>p{
+    font-weight: bold;
+    padding: 10px;
+}
+
+.innerDiv .conDiv span{
+    position: absolute;
+    text-align: center;
+    line-height: 20px;
+}
+
+.innerDiv .conDiv span:nth-child(2){
+    top: 70px;
+    left: 34px;
+}
+
+.innerDiv .conDiv span:nth-child(3) {
+    top: 70px;
+    right: 0px;
+}
+
+.innerDiv .conDiv span:nth-child(4) {
+    bottom: 35px;
+    right: 0px;
+}
+
+.box1{
+    /* border: 1px solid red; */
+    display: inline-block;
+    width: 275px;
+    vertical-align: top;
+}
+
+.box1 .box_name{
+    text-align: center;
+    background: #e5ddd9;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+.box1 .box_name span:first-child{
+    background: #fff;
+    border: 1px solid #000;
+    border-radius: 20px;
+    padding: 0 5px;
+    margin-right: 3px;
+}
+
+
+.box1 .box.linebox{
+    padding:  16px 15px;
+}
+
+.box1:first-child{
+    margin-right: 20px;
+}
+
+.ic_page_a2 .box1:first-child .box.linebox li:nth-child(1),
+.ic_page_a2 .box1 .box.linebox li:nth-child(2){
+    display: inline-block;
+    width: 118px;
+}
+
+.quizA2_1_answer img{
+    width: 100%;
+}
+
+.ic_page_a3 .box1 .box_name .input{
+    display: inline-block;
+    width: 150px;
+}
+
+.quizA3_1_answer .box.linebox img{
+    width: 100%;
+}
+
+.quizA3_1_answer .box.linebox{
+    height: 205px;
+}
+
+.ic_page_a3 .subtitle .icon:nth-child(2){
+    left: 35px;
+}
+
+.ic_page_a3 .subtitle .txt{
+    padding-left: 63px !important;
+}
+
+.ic_page_a4 .linebox img{
+    width: 100%;
+}
+
+.ic_page_a5 .quiz_area .dotted{
+    margin-bottom: 10px;
+}
+
+.ic_page_a5 .quiz_area .dotted:first-child .box.input.rbox{
+    width: 200px;
+}
+
+.ic_page_a5 .quiz_area .dotted:last-child .box.input.rbox {
+    width: 455px;
+    vertical-align: top;
+}
+
+.ic_page_a5 .quiz_area .dotted:first-child::before{
+   top: 13px;
+}
+
+.ic_page_a6 .subtitle .txt .icon:nth-child(2) {
+    left: 35px !important;
+}
+
+.ic_page_a6 .subtitle .txt {
+    padding-left: 63px !important;
+}
+
+.ic_page_a6 img{
+    width: 100%;
+}
+
+
+.ic_page_a6 .hint--feedback{
+    margin: 0;
+}
+
+
+
+#inquiryQuizA2 .solution_popup .select--on .icon.check.square {
+    background: #e6e0ff;
+    border-color: #4115ff;
+}
+
+#inquiryQuizA2 .solution_popup [data-multiple-num].b2.select--on .icon.check.square:before {
+    background: url(../images/page118/page118_circle_01.png) center / auto 16px no-repeat !important;
+}
+
+.ic_page_a3 .linebox{
+    width: 275px;
+    height: 200px;
+    padding: 0 !important;   
+}
+
+.ic_page_a3 .drawing--controller {
+    width: 270px;
+    height: 197px;
+}
+
+.ic_page_a3 .drawing--controller .btn.open--drawing {
+    bottom: 5px;
+    left: 5px;
+}
+
+.ic_page_a3 .drawing_area .drawing--menu.active{
+    width: 436px;
+    z-index: 8;
+    left: 0;
+    bottom: -50px;
+} 
+
+.ic_page_a3 .btn.open--drawing.on{
+    bottom: -20px;
+left: 428px;
+}
+
+.ic_page_a3 .drawingWrap2 .drawing_area .drawing--menu.active{
+    left: -163px !important;
+}
+
+
+.ic_page_a3 .drawingWrap2 .btn.open--drawing.on{
+    left: 262px !important;
+}
